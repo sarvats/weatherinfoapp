@@ -41,10 +41,10 @@ class _MyHomePageState extends State<MyHomePage> {
     final Random random = Random();
     
     setState(() {
-      // Get the entered city name
+      
       _cityName = _cityController.text;
 
-      // Generate a random temperature between 15°C and 30°C
+      
       int temp = 15 + random.nextInt(16);
       _temperature = '$temp°C';
 
