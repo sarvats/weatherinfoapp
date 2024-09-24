@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -35,12 +36,21 @@ class _MyHomePageState extends State<MyHomePage> {
   String _temperature = '';
   String _weatherCondition = '';
 
+  // Function to simulate fetching weather data
   void _fetchWeather() {
-    // Simulate a weather fetch
+    final Random random = Random();
+    
     setState(() {
+      // Get the entered city name
       _cityName = _cityController.text;
-      _temperature = '25°C'; // Placeholder temperature
-      _weatherCondition = 'Sunny'; // Placeholder weather condition
+
+      // Generate a random temperature between 15°C and 30°C
+      int temp = 15 + random.nextInt(16);
+      _temperature = '$temp°C';
+
+      // Randomly select a weather condition
+      List<String> conditions = ['Sunny', 'Cloudy', 'Rainy'];
+      _weatherCondition = conditions[random.nextInt(conditions.length)];
     });
   }
 
