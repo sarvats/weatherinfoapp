@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
       int temp = 15 + random.nextInt(16);
       _temperature = '$temp°C';
 
-      // Randomly select a weather condition
+      
       List<String> conditions = ['Sunny', 'Cloudy', 'Rainy'];
       _weatherCondition = conditions[random.nextInt(conditions.length)];
     });
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
             TextField(
               controller: _cityController,
               decoration: const InputDecoration(
-                labelText: 'Enter City Name',
+                labelText: 'Enter City',
                 border: OutlineInputBorder(),
               ),
             ),
